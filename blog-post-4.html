@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Pengertian Cross Site Scripting ( XSS Attack )</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Noniod7 - Responsive vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Noniod7, portfolio" />
+    <meta name="author" content="lmtheme" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/transition-animations.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    
+  
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body>
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <!-- Single Post page -->
+    <div id="page" class="page blog-post-page">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="my-photo">
+          <img src="images/my_photo.jpg" alt="image">
+          <div class="mask"></div>
+        </div>
+
+        <div class="site-title-block">
+         <a href="#" target="_blank"><h1 class="site-title">NiodTech</h1></a>
+          <p class="site-description">Web Designer</p>
+        </div>
+      </header>
+      <!-- /Header -->
+
+      <div id="main" class="site-main">
+        <div class="page-wrapper">
+          <a class="blog-back-button" href="index.html#blog"><i class="fa fa-angle-left"></i></a>
+
+          <div class="blog-post-main-image">
+            <img class="post-image img-responsive" src="images/blog/blog_post_2_full.jpg" alt="blog-post-1" />
+          </div>
+
+          <div class="blog-post-content">
+            <h1>Pengertian Cross Site Scripting ( XSS Attack )</h1>
+            <ul class="tags">
+                <li><a>XSS</a></li>
+            </ul>
+            <div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; text-align: center; vertical-align: baseline;"><div class="separator" style="background: 0px 0px; border: 0px; box-sizing: border-box; clear: both; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><a href="https://crashtest-security.com/wp-content/uploads/2019/03/XSS_Description-1024x576.png" style="background: 0px 0px; border: 0px; box-sizing: border-box; clear: none !important; float: none !important; margin: 0px 1em; outline: none; padding: 0px; text-decoration-line: none !important; transition: all 0s ease 0s; vertical-align: baseline;"><img border="0" data-original-height="450" data-original-width="800" height="225" src="https://crashtest-security.com/wp-content/uploads/2019/03/XSS_Description-1024x576.png" style="background: 0px 0px; border: 0px; box-sizing: border-box; height: auto !important; margin: 0px; max-width: 100%; outline: none; padding: 0px; position: relative; vertical-align: baseline;" width="400" /></a></div><br style="box-sizing: border-box;" /><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: Saira; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: &quot;Balsamiq Sans&quot;; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Halo semua, gw mau memberikan pengetauhan tentang XSS Attack, pengertian, serta jenis-jenis XSS Attack.</span></div><div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; text-align: center; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: &quot;Balsamiq Sans&quot;; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; text-align: center; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: &quot;Balsamiq Sans&quot;; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: &quot;Balsamiq Sans&quot;; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Pengertian Xss Attack :</span></div><div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: &quot;Balsamiq Sans&quot;; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px rgb(255, 255, 255); border: 0px; box-sizing: border-box; color: #626262; font-family: Montserrat, Arial, sans-serif; font-size: 15px; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-family: &quot;Balsamiq Sans&quot;; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Cross site scripting atau xss adalah serangan injeksi kode pada sisi klien dengan menggunakan sarana halaman website atau web aplikasi. Peretas akan mengeksekusi skrip berbahaya di browser korban dengan cara memasukkan kode berbahaya ke halaman web atau web aplikasi yang sah.</div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Forum, kolom komentar, dan message boards biasanya digunakan oleh penyerang untuk memposting link untuk membuat skrip berbahaya. Skrip tersebut kemudian akan menyerang ketika korban mengklik tautan tersebut. Cross site scripting ini sering digunakan untuk mencuri session cookies, yang memungkinkan penyerang untuk menyamar sebagai korban.</div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Jenis-Jenis Xss Attack :</span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Pengertian Xss Payloads :</span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Xss Payloads adalah sekumpulan injeksi kode yang digunakan untuk penyerangan suatu website. Xss sendiri adalah kependekan dari Cross Site Scripting. Kenapa ga Css? Karena Css sudah dipake oleh Cascading Style Sheets. Xss terdapat dua jenis serangan, yaitu Reflected Xss dan Stored Xss</span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: large; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Pengertian Xss Reflected :</span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: 0px 0px; background-repeat: initial; background-size: initial; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Reflected XSS&nbsp;</span><span style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: 0px 0px; background-repeat: initial; background-size: initial; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">adalah tipe serangan yang paling umum dan paling mudah dilakukan. Serangan ini biasanya hanya untuk menampilan sebuah text alert atau bisa menampilkan cookie dari sebuah website. Contoh yang paling umum adalah seperti ini.</span></span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><pre class="hljs" style="background: rgb(40, 43, 46); border-radius: var(--radius); border: 1px solid var(--border-color); box-sizing: border-box; color: #a9b7c6; font-size: 13px; line-height: 1.4em; margin-bottom: 0px; margin-top: 0px; outline: none; overflow-x: auto; padding: 0.5em; vertical-align: baseline; white-space: pre-wrap;"><span class="xml" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span class="hljs-tag" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">&lt;<span class="hljs-name" style="background: 0px 0px; border: 0px; box-sizing: border-box; color: #e8bf6a; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">script</span>&gt;</span><span class="actionscript" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">alert(<span class="hljs-string" style="background: 0px 0px; border: 0px; box-sizing: border-box; color: #6a8759; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">'xss'</span>);</span><span class="hljs-tag" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">&lt;/<span class="hljs-name" style="background: 0px 0px; border: 0px; box-sizing: border-box; color: #e8bf6a; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">script</span>&gt;</span></span></pre><span style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: 0px 0px; background-repeat: initial; background-size: initial; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">Contoh jika pada sebuah website ditambahkan kode diatas maka akan muncul popup yang berisi text "xss". Penambahan kode seperti diatas bisa ditambahkan dikolom pencarian sebuah website. Jika sudah ditambahkan dan sudah kalian pencet enter maka url pada website nya bisa seperti ini.</span></span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: 0px 0px; background-repeat: initial; background-size: initial; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><pre class="hljs" style="background: rgb(40, 43, 46); border-radius: var(--radius); border: 1px solid var(--border-color); box-sizing: border-box; color: #a9b7c6; font-size: 13px; line-height: 1.4em; margin-bottom: 0px; margin-top: 0px; outline: none; overflow-x: auto; padding: 0.5em; vertical-align: baseline; white-space: pre-wrap;"><span class="xml" style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">http://site.com/index.php?search=<span class="hljs-tag" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">&lt;<span class="hljs-name" style="background: 0px 0px; border: 0px; box-sizing: border-box; color: #e8bf6a; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">script</span>&gt;</span><span class="actionscript" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">alert(<span class="hljs-string" style="background: 0px 0px; border: 0px; box-sizing: border-box; color: #6a8759; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">'xss'</span>);</span><span class="hljs-tag" style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">&lt;/<span class="hljs-name" style="background: 0px 0px; border: 0px; box-sizing: border-box; color: #e8bf6a; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">script</span>&gt;</span></span></pre></span></span></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><br style="box-sizing: border-box;" /></div><div style="background: 0px 0px; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background: 0px 0px; border: 0px; box-sizing: border-box; font-size: medium; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;"><span style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: 0px 0px; background-repeat: initial; background-size: initial; border: 0px; box-sizing: border-box; margin: 0px; outline: none; padding: 0px; vertical-align: baseline;">&gt;_ Sekian, kalo ada salah mohon dikoreksi</span></span></div></span></div></span></div>
+
+            <div class="post-info">
+              <span class="autor"><i class="fa fa-fw fa-user"></i> Noniod7</span>
+              <span class="divider">|</span>
+              <span class="date"><i class="fa fa-fw fa-clock-o"></i> 12 December, 2022</span>
+              <!-- Share Buttons -->
+              <div class="btn-group share-buttons pull-right hidden-xs">
+                <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>
+                <a href="#" target="_blank" class="btn"><i class="fa fa-twitter"></i> </a>
+                <a href="#" target="_blank" class="btn"><i class="fa fa-dribbble"></i> </a>
+              </div>
+              <!-- /Share Buttons -->
+            </div>
+
+            <div class="post-comments">
+              <div class="block-title">
+                <h3>Comments (3)</h3>
+              </div>
+
+              <div class="media">
+                  <a class="pull-left" href="#">
+                      <img class="media-object" src="images/blog/comments/comment_photo_1.png" alt="">
+                  </a>
+                  <div class="media-body">
+                      <div class="media-heading">
+                          <a href="#">Samsudin</a> <span class="divider">|</span> <span class="light-gray">1 hour ago</span>
+                      </div>
+                      <p>Makasih infonya min...</p>
+                      <div class="media-footer">
+                          <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                          <span class="divider"></span>
+                          <i class="fa fa-thumbs-up"></i>
+                          <span>6</span>
+                          <i class="fa fa-thumbs-down"></i>
+                      </div>
+
+                      <div class="media">
+                          <a class="pull-left" href="#">
+                              <img class="media-object" src="images/blog/comments/comment_photo_2.png" alt="">
+                          </a>
+                          <div class="media-body">
+                              <div class="media-heading">
+                                  <a href="#">Jamal</a> <span class="divider">|</span> <span class="light-gray">5 hours ago</span>
+                              </div>
+                              <p>ini yg ku cari cari.</p>
+                              <div class="media-footer">
+                                  <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                  <span class="divider"></span>
+                                  <i class="fa fa-thumbs-up"></i>
+                                  <span>0</span>
+                                  <i class="fa fa-thumbs-down"></i>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="media">
+                          <a class="pull-left" href="#">
+                              <img class="media-object" src="images/blog/comments/comment_photo_1.png" alt="">
+                          </a>
+                          <div class="media-body">
+                              <div class="media-heading">
+                                  <a href="#">Rizky</a> <span class="divider">|</span> <span class="light-gray">12 hours ago</span>
+                              </div>
+                              <p>KELASSS.</p>
+                              <div class="media-footer">
+                                  <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                  <span class="divider"></span>
+                                  <i class="fa fa-thumbs-up"></i>
+                                  <span>0</span>
+                                  <i class="fa fa-thumbs-down"></i>
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+            </div>
+
+            <div class="post-comment-add">
+                <div class="block-title">
+                  <h3>Leave a Comment</h3>
+                </div>
+                <form class="form-add-comment">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Your name" name="name">
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon fa fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message..." name="message"></textarea>
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon fa fa-comment"></i>
+                    </div> 
+                    <button class="button" type="submit">Add comment</button>
+                </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /Single Post page -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/page-transition.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+
+</html>
